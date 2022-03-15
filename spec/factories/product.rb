@@ -5,7 +5,7 @@ FactoryBot.define do
     price { 3.11 }
 
     trait :with_discount do
-      # discount_rule
+      discount_rule { build(:discount_rule, :buy_few_get_one) }
     end
   end
 end
