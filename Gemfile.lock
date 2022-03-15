@@ -253,7 +253,7 @@ DEPENDENCIES
   pry (~> 0.13.1)
   puma (~> 4.1)
   rails (~> 6.0.4, >= 6.0.4.6)
-  rspec-rails
+  rspec-rails (~> 5.1, >= 5.1.1)
   sass-rails (>= 6)
   selenium-webdriver
   spring
