@@ -5,7 +5,7 @@ FactoryBot.define do
     price { 3.11 }
 
     trait :with_discount do
-      discount_rule
+      # discount_rule
     end
   end
 end
