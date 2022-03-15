@@ -1,5 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe Product, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'associations' do
+    it { is_expected.to have_one(:discount_rule) }
+    it { is_expected.to have_and_belong_to_many(:orders) }
+  end
+
+  describe 'validations' do
+    it { is_expected.to validate_presence_of(:name) }
+    it { is_expected.to validate_presence_of(:code) }
+    it { is_expected.to monetize(:price).with_currency(:usd) }
+  end
 end
