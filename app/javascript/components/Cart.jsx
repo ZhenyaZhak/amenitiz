@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styles from '../stylesheets/catalog.scss'
 
 const Cart = (props) => {
-  const [cartProducts, setCartProducts] = useState(props.loaclStorageProducts || [])
+  const cartProducts = props.loaclStorageProducts || []
 
   function cartPrice(cartProducts){
     const pricesАrray = cartProducts.filter(cartProducts =>  cartProducts.quantity !== 0 )
@@ -11,11 +11,6 @@ const Cart = (props) => {
       return pricesАrray.reduce((accum,sum) => accum + sum ).toFixed(2)
     }
     return undefined
-  }
-
-  function submitCart() {
-    props.submitOrder()
-    setCartProducts([])
   }
 
   return(
@@ -41,7 +36,7 @@ const Cart = (props) => {
         <div className="cartTotalBlock">
           <span>Total Price:</span>
           <span className="totalPrice">{cartPrice(cartProducts)}$</span>
-          <button className="submitOrder" onClick={() => submitCart()}>Submit order</button>
+          <button className="submitOrder" onClick={() => props.submitOrder()}>Submit order</button>
         </div>
       }
     </div>
