@@ -71,7 +71,7 @@ const Market = (props) => {
     const total_price = document.querySelector(`[class="totalPrice"`).innerHTML
     $.post({
       url: "/orders",
-      data: { order_params: orderParams(), total_price: total_price},
+      data: { order: { order_content: orderParams(), amount: total_price } },
       dataType: "json",
     }).done( function(data) {
       setOrders(data.orders)
