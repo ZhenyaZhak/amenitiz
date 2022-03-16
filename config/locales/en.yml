@@ -2,3 +2,5 @@ en:
   controllers:
     calculate_products_price:
       not_found: Wrong calculation params
+    orders:
+      unprocessable_entity: Unprocessable entity
