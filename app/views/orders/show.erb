@@ -1,0 +1,11 @@
+<h2>Cart <%= @order.created_at %></h2>
+
+<table>
+  <% @order_products.each do |order_product| %>
+  <tr>
+    <td><%= order_product[:name] %></td>
+    <td><%= order_product[:quantity] %></td>
+  </tr>
+  <% end %>
+</table>
+<%= link_to 'Go back', root_path %>
