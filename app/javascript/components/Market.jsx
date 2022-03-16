@@ -77,7 +77,6 @@ const Market = (props) => {
       setOrders(data.orders)
       window.localStorage.clear()
       setLoaclStorageProducts([])
-      addProductTriggerCall()
     })
   }
 
