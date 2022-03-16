@@ -247,7 +247,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   factory_bot_rails
-  faker
+  faker (~> 2.20)
   jbuilder (~> 2.7)
   listen (~> 3.2)
   money-rails (~> 1.15)
@@ -255,7 +255,7 @@ DEPENDENCIES
   pry (~> 0.13.1)
   puma (~> 4.1)
   rails (~> 6.0.4, >= 6.0.4.6)
-  rspec-rails
+  rspec-rails (~> 5.1, >= 5.1.1)
   sass-rails (>= 6)
   selenium-webdriver
   shoulda-matchers (~> 5.0)

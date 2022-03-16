@@ -18,7 +18,7 @@ class Carts::CalculateProductsPriceController < ApplicationController
   end
 
   def product_quantity
-    @product_quantity ||= params.dig(:cart_params, :quantity)
+    @product_quantity ||= params.dig(:cart_params, :quantity).to_i
   end
 
   def product_code_params
