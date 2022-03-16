@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :product do
-    name { 'Green Tea' }
+    name { Faker::Food.fruits }
     code { 'GR1' }
-    price { 3.11 }
+    price_cents { Faker::Number.number(digits: 4) }
 
     trait :with_discount do
       discount_rule { build(:discount_rule, :buy_few_get_one) }

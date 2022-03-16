@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :order do
-    amount { 13.33 }
+    amount_cents { Faker::Number.number(digits: 4) }
   end
 end
